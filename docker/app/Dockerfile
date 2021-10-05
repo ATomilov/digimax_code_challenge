@@ -19,7 +19,5 @@ WORKDIR $APP_HOME
 # Install required Bundler version
 RUN gem install bundler:$BUNDLER_VERSION
 
-COPY Gemfile ./Gemfile
-COPY Gemfile.lock ./Gemfile.lock
-RUN bundle install
-COPY . .
+RUN gem install bundler
+COPY . ./
