@@ -7,7 +7,13 @@ services:
       dockerfile: ./docker/app/Dockerfile
       args:
         RUBY_VERSION: '3.0.2'
+        BUNDLER_VERSION: '2.2.28'
     stdin_open: true
     tty: true
     volumes:
       - .:/home/dockeruser/test_project
+      - bundle_gems_for_app:/usr/local/bundle
+
+volumes:
+  bundle_gems_for_app:
+    external: true
