@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'set'
 
 module Processors
@@ -32,7 +30,7 @@ module Processors
     attr_reader :file_path
 
     REQUIRED_WORD_LENGTH = 6
-    NEW_LINE_DELIMITER = "\n"
+    NEW_LINE_DELIMITER = "\n".freeze
 
     # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
     def find_word_in_hashes
