@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+      args:
+        RUBY_VERSION: '3.0.2'
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/home/dockeruser/test_project
